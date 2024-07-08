@@ -1,5 +1,8 @@
 # Mini Apps Quest Template
 
+## Resources
+- [Telegram Mini Apps Docs](https://core.telegram.org/bots/webapps)
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
