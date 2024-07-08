@@ -2,6 +2,7 @@
 
 ## Resources
 - [Telegram Mini Apps Docs](https://core.telegram.org/bots/webapps)
+- [shadcn-svelte](https://www.shadcn-svelte.com/)
 
 ## Creating a project
 
