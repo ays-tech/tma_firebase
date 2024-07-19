@@ -25,3 +25,6 @@ ngrok.exe
 
 # Notes
 Notes.md
+
+# Firebase
+*.log
