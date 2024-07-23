@@ -1,9 +1,6 @@
 <script>
 	import './app.css';
-
-	import { Button } from '$lib/components/ui/button';
+	import Home from './routes/Home.svelte';
 </script>
 
-Welcome to Mini Apps Quest!
-
-<Button>Button</Button>
+<Home />
