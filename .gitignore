@@ -28,3 +28,6 @@ Notes.md
 
 # Firebase
 *.log
+
+# Playground
+src/routes/playground/
