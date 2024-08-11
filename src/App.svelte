@@ -10,10 +10,12 @@
 	import About from './routes/About.svelte';
 	import NotFound from './routes/NotFound.svelte';
 	import { onMount } from 'svelte';
+	import { referralRoutes } from './routes/Referral/referrals';
 
 	let routes = {
 		'/': Home,
 		'/about': About,
+		...referralRoutes,
 		'*': NotFound
 	};
 
@@ -26,8 +28,9 @@
 
 		const startParam = initData?.startParam;
 		if (startParam) {
+			push(`/newReferral/${startParam}`);
 		}
-		});
+	});
 </script>
 
 <main>
