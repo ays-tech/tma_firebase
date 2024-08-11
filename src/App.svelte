@@ -3,7 +3,8 @@
 
 	import Router, { pop, push } from 'svelte-spa-router';
 
-	import { postEvent, on } from '@telegram-apps/sdk';
+	import { retrieveLaunchParams, postEvent, on } from '@telegram-apps/sdk';
+	const { initData } = retrieveLaunchParams();
 
 	import Home from './routes/Home.svelte';
 	import About from './routes/About.svelte';
@@ -22,6 +23,10 @@
 		on('back_button_pressed', (payload) => {
 			pop();
 		});
+
+		const startParam = initData?.startParam;
+		if (startParam) {
+		}
 		});
 </script>
 
