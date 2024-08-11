@@ -53,3 +53,29 @@ export const generateStarPaymentLink = onRequest(async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+
+export const sendTelegramMessage = onRequest(async (req, res) => {
+    try {
+        const { chatId, message } = req.body;
+
+        if (!chatId || !message) {
+            res.status(400).send('Missing chatId or message in the request body');
+        }
+
+        const response = await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN.value()}/sendMessage`, {
+            chat_id: chatId,
+            text: message
+        });
+
+        if (response.data.ok) {
+            logger.log('Message sent successfully');
+            res.status(200).send('Message sent successfully');
+        } else {
+            logger.error('Failed to send message:', response.data);
+            res.status(500).send('Failed to send message');
+        }
+    } catch (error) {
+        logger.error('Error:', error);
+        res.status(500).send('Internal server error');
+    }
+});
