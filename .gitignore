@@ -28,6 +28,7 @@ Notes.md
 
 # Firebase
 *.log
+firebase-config.ts
 
 # Playground
 playground/
