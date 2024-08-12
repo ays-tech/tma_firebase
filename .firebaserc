@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "mini-apps-quest"
-  }
+    "no reason": "brave-dimension-300108"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
